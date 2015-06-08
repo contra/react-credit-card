@@ -55,7 +55,7 @@ module.exports = React.createClass
 
     return className
 
-  typeClassName:-> "#{exp.prefix}--" + @state.type.name
+  typeClassName:-> "#{exp.prefix}--" + (@props.type or @state.type.name)
 
   getValue:(name)-> @[name]()
 
