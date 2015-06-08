@@ -37,7 +37,7 @@
         "className": "" + exp.prefix + "__shiny"
       }), React.createElement("img", {
         "className": ("" + exp.prefix + "__logo ") + this.typeClassName(),
-        "src": images[this.state.type.name]
+        "src": images[this.props.type || this.state.type.name]
       }), React.createElement("div", {
         "className": this.displayClassName("number")
       }, this.getValue("number")), React.createElement("div", {
@@ -66,7 +66,7 @@
       return className;
     },
     typeClassName: function() {
-      return ("" + exp.prefix + "--") + (this.props.type or this.state.type.name);
+      return ("" + exp.prefix + "--") + (this.props.type || this.state.type.name);
     },
     getValue: function(name) {
       return this[name]();
