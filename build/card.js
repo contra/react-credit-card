@@ -66,7 +66,7 @@
       return className;
     },
     typeClassName: function() {
-      return ("" + exp.prefix + "--") + this.state.type.name;
+      return ("" + exp.prefix + "--") + (this.props.type or this.state.type.name);
     },
     getValue: function(name) {
       return this[name]();
